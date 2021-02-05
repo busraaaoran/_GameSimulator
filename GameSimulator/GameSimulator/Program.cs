@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GameSimulator.Concrete;
+using GameSimulator.Abstract;
+using GameSimulator.Entities;
+using System;
 
 namespace GameSimulator
 {
@@ -6,7 +9,10 @@ namespace GameSimulator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!!!!");
+            SalesManager salesManager = new SalesManager();
+            PlayerManager playerManager = new PlayerManager();
+
+
         }
     }
 }
