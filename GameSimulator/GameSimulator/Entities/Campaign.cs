@@ -7,9 +7,9 @@ namespace GameSimulator.Entities
 {
     public class Campaign:IEntity
     {
-        public float DiscountRatio { get; set; }
+        public int DiscountRatio { get; set; }
 
-        public int CampaignID { get; set; }
+        public string CampaignID { get; set; }
 
     }
 }

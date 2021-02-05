@@ -7,8 +7,8 @@ namespace GameSimulator.Abstract
 {
     public interface ISalesService
     {
-        void Add(Player player, Game game);
-        void Update();
-        void Delete();
+        void Add(Player player, Game game,Campaign campaign);
+        void Update(Game game,Campaign campaign);
+        void Delete(Game game);
     }
 }

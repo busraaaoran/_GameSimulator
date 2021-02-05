@@ -7,7 +7,7 @@ namespace GameSimulator.Entities
 {
     public class Player:IEntity
     {
-        public string TCKN { get; set; }
+        public long TCKN { get; set; }
 
         public string FirstName { get; set; }
 

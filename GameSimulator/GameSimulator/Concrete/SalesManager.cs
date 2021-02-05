@@ -8,19 +8,20 @@ namespace GameSimulator.Concrete
 {
     class SalesManager : ISalesService
     {
-        public void Add(Player player, Game game)
+        public void Add(Player player, Game game,Campaign campaign)
         {
-            Console.WriteLine("Player "+player.FirstName+" "+player.LastName+" purchased "+game.GameName+" for "+game.Price+" pound.");
+            
+            Console.WriteLine("Player "+player.FirstName+" "+player.LastName+" purchased "+game.GameName+" for "+(game.Price-(game.Price*campaign.DiscountRatio/100))+" pound with %"+campaign.DiscountRatio+" discount.");
         }
 
-        public void Delete()
+        public void Delete(Game game)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("The game " + game.GameName + " is deleted");
         }
 
-        public void Update()
+        public void Update(Game game, Campaign campaign)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("The game " + " 's price is updated with %" + campaign.DiscountRatio + " dicount.");
         }
     }
 }
