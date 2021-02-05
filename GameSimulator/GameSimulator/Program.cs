@@ -2,6 +2,7 @@
 using GameSimulator.Abstract;
 using GameSimulator.Entities;
 using System;
+using GameSimulator.Adapters;
 
 namespace GameSimulator
 {
@@ -12,6 +13,7 @@ namespace GameSimulator
             SalesManager salesManager = new SalesManager();
             PlayerManager playerManager = new PlayerManager();
             CampaignManager campaignManager = new CampaignManager();
+            MernisServiceAdapter mernisServiceAdapter = new MernisServiceAdapter();
 
             Player player1 = new Player
             {
@@ -36,6 +38,7 @@ namespace GameSimulator
                 LastName = "Beşikçi",
                 TCKN = 66666666610
             };
+
 
 
             playerManager.Add(player1);
@@ -77,7 +80,8 @@ namespace GameSimulator
             };
 
             salesManager.Add(player1, game1, campaign1);
-
+            mernisServiceAdapter.IsPerson(player1);
+            
         }
     }
 }

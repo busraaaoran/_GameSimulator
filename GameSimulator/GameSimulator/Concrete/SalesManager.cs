@@ -21,7 +21,7 @@ namespace GameSimulator.Concrete
 
         public void Update(Game game, Campaign campaign)
         {
-            Console.WriteLine("The game " + " 's price is updated with %" + campaign.DiscountRatio + " dicount.");
+            Console.WriteLine("The game " + " 's price is updated with %" + campaign.DiscountRatio + " discount.");
         }
     }
 }

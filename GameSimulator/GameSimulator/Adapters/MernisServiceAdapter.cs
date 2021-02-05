@@ -14,7 +14,7 @@ namespace GameSimulator.Adapters
         {
             KPSPublicSoapClient client = new KPSPublicSoapClient();
 
-            return client.TCKimlikNoDogrula(player.TCKN,player.FirstName.ToUpper(),player.LastName.ToUpper(),player.DateOfBirth.Year);
+            return Convert.ToBoolean(client.TCKimlikNoDogrula(player.TCKN,player.FirstName.ToUpper(),player.LastName.ToUpper(),player.DateOfBirth.Year));
         }
     }
 }
