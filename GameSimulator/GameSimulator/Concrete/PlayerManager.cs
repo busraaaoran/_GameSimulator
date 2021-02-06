@@ -10,18 +10,18 @@ namespace GameSimulator.Concrete
 {
     class PlayerManager : MernisServiceAdapter,IPlayerService
     {
-        //IPlayerCheckService _playerCheckService;
+        IPlayerCheckService _playerCheckService;
 
 
-        //public PlayerManager(IPlayerCheckService playerCheckService)
-        //{
-        //    _playerCheckService = playerCheckService;
-        //}
-        MernisServiceAdapter mernisServiceAdapter = new MernisServiceAdapter();
+        public PlayerManager(IPlayerCheckService playerCheckService)
+        {
+            _playerCheckService = playerCheckService;
+        }
+        //MernisServiceAdapter mernisServiceAdapter = new MernisServiceAdapter();
 
         public void Add(Player player)
         {
-            if (mernisServiceAdapter.IsPerson(player))//(_playerCheckService.IsPerson(player))
+            if (_playerCheckService.IsPerson(player))//(_playerCheckService.IsPerson(player))
             {
                 Console.WriteLine("Player " + player.FirstName + " " + player.LastName + " joined to the game.");
             }

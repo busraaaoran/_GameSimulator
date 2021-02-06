@@ -11,7 +11,7 @@ namespace GameSimulator
         static void Main(string[] args)
         {
             SalesManager salesManager = new SalesManager();
-            PlayerManager playerManager = new PlayerManager();
+            PlayerManager playerManager = new PlayerManager(new MernisServiceAdapter());
             CampaignManager campaignManager = new CampaignManager();
             //MernisServiceAdapter mernisServiceAdapter = new MernisServiceAdapter();
 
